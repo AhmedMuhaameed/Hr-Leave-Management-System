@@ -1,0 +1,1003 @@
+2023-05-27 17:03:46.697 +03:00 [INF] User profile is available. Using 'C:\Users\AhmedPC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-27 17:03:46.909 +03:00 [INF] Now listening on: https://localhost:7210
+2023-05-27 17:03:46.912 +03:00 [INF] Now listening on: http://localhost:5125
+2023-05-27 17:03:46.915 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-27 17:03:46.918 +03:00 [INF] Hosting environment: Development
+2023-05-27 17:03:46.922 +03:00 [INF] Content root path: C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api
+2023-05-27 17:03:47.165 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - -
+2023-05-27 17:03:47.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - - - 200 - text/html;charset=utf-8 569.4526ms
+2023-05-27 17:03:47.761 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - -
+2023-05-27 17:03:47.797 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2023-05-27 17:03:47.897 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 99.7436ms
+2023-05-27 17:03:47.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 173.9580ms
+2023-05-27 17:03:48.018 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - -
+2023-05-27 17:03:48.288 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 269.7865ms
+2023-05-27 17:03:54.610 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/Auth/login - -
+2023-05-27 17:03:54.621 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:03:54.626 +03:00 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 8.9340 ms
+2023-05-27 17:03:54.631 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/Auth/login - - - 204 - - 20.1199ms
+2023-05-27 17:03:54.633 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/Auth/login application/json 48
+2023-05-27 17:03:54.637 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:03:54.661 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.AuthController.Login (HR.LeaveManagement.Api)'
+2023-05-27 17:03:54.688 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HR.LeaveManagement.Application.Models.Identity.AuthResponse]] Login(HR.LeaveManagement.Application.Models.Identity.AuthRequest) on controller HR.LeaveManagement.Api.Controllers.AuthController (HR.LeaveManagement.Api).
+2023-05-27 17:03:56.906 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-05-27 17:03:57.198 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-05-27 17:03:57.226 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-05-27 17:03:57.302 +03:00 [INF] Executing OkObjectResult, writing value of type 'HR.LeaveManagement.Application.Models.Identity.AuthResponse'.
+2023-05-27 17:03:57.312 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.AuthController.Login (HR.LeaveManagement.Api) in 2614.0757ms
+2023-05-27 17:03:57.317 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.AuthController.Login (HR.LeaveManagement.Api)'
+2023-05-27 17:03:57.320 +03:00 [INF] HTTP POST /api/Auth/login responded 200 in 2683.7793 ms
+2023-05-27 17:03:57.330 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/Auth/login application/json 48 - 200 - application/json;+charset=utf-8 2696.8146ms
+2023-05-27 17:03:59.520 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:03:59.523 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:03:59.524 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.9331 ms
+2023-05-27 17:03:59.529 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 9.5832ms
+2023-05-27 17:03:59.532 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:03:59.534 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:03:59.607 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:03:59.617 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:03:59.883 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:03:59.910 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:03:59.913 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:03:59.919 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 299.5568ms
+2023-05-27 17:03:59.921 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:03:59.924 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 389.6168 ms
+2023-05-27 17:03:59.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 393.9563ms
+2023-05-27 17:04:00.853 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/1 - -
+2023-05-27 17:04:00.854 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:00.854 +03:00 [INF] HTTP OPTIONS /api/LeaveType/1 responded 204 in 0.5418 ms
+2023-05-27 17:04:00.856 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/1 - - - 204 - - 2.7272ms
+2023-05-27 17:04:00.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType/1 - -
+2023-05-27 17:04:00.859 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:00.864 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:00.868 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO]] Get(Int32) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:04:00.900 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:04:00.907 +03:00 [INF] Executing OkObjectResult, writing value of type 'HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO'.
+2023-05-27 17:04:00.916 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 46.4915ms
+2023-05-27 17:04:00.918 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:00.920 +03:00 [INF] HTTP GET /api/LeaveType/1 responded 200 in 60.6251 ms
+2023-05-27 17:04:00.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType/1 - - - 200 - application/json;+charset=utf-8 65.0094ms
+2023-05-27 17:04:01.778 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:04:01.780 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:01.784 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:01.786 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:04:01.790 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:04:01.793 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:04:01.794 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:04:01.796 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 8.3476ms
+2023-05-27 17:04:01.797 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:01.798 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 17.7450 ms
+2023-05-27 17:04:01.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 21.2320ms
+2023-05-27 17:04:05.117 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:04:05.120 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:05.122 +03:00 [INF] HTTP OPTIONS /api/LeaveType/2 responded 204 in 2.0320 ms
+2023-05-27 17:04:05.124 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - - - 204 - - 6.5191ms
+2023-05-27 17:04:05.125 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:04:05.127 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:05.128 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:05.129 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO]] Get(Int32) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:04:05.137 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:04:05.139 +03:00 [INF] Executing OkObjectResult, writing value of type 'HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO'.
+2023-05-27 17:04:05.141 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 9.9685ms
+2023-05-27 17:04:05.143 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:05.144 +03:00 [INF] HTTP GET /api/LeaveType/2 responded 200 in 16.6173 ms
+2023-05-27 17:04:05.145 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType/2 - - - 200 - application/json;+charset=utf-8 19.4986ms
+2023-05-27 17:04:07.731 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:04:07.733 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:07.736 +03:00 [INF] HTTP OPTIONS /api/LeaveType/2 responded 204 in 2.3527 ms
+2023-05-27 17:04:07.739 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - - - 204 - - 8.0598ms
+2023-05-27 17:04:07.740 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38
+2023-05-27 17:04:07.741 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:07.742 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:04:07.745 +03:00 [INF] Route matched with {action = "Put", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType.UpdateLeaveTypeCommand) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:04:07.806 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveTypes] AS [l]
+        WHERE [l].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:04:07.844 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveTypes] AS [l]
+        WHERE [l].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:04:07.854 +03:00 [WRN] Validation errors in update request for LeaveType - 2
+2023-05-27 17:04:07.858 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api) in 110.9945ms
+2023-05-27 17:04:07.860 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:04:07.861 +03:00 [ERR] HTTP PUT /api/LeaveType/2 responded 500 in 119.7837 ms
+HR.LeaveManagment.Application.Exceptions.BadRequestException: Invalid Leave type
+   at HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType.UpdateLeaveTypeCommandHandler.Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\Features\LeaveType\Commands\UpdateLeaveType\UpdateLeaveTypeCommandHandler.cs:line 33
+   at HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put(UpdateLeaveTypeCommand leaveType) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api\Controllers\LeaveTypeController.cs:line 55
+   at lambda_method224(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-05-27 17:04:07.896 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38 - 400 - application/json;+charset=utf-8 155.2539ms
+2023-05-27 17:04:11.152 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:04:11.154 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:11.155 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 0.8786 ms
+2023-05-27 17:04:11.157 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 4.5340ms
+2023-05-27 17:04:11.159 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:04:11.160 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:11.163 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:11.164 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:04:11.172 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:04:11.175 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:04:11.176 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:04:11.178 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 10.1318ms
+2023-05-27 17:04:11.179 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:11.182 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 21.3018 ms
+2023-05-27 17:04:11.184 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 25.0646ms
+2023-05-27 17:04:12.754 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:04:12.756 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:12.758 +03:00 [INF] HTTP OPTIONS /api/LeaveRequest responded 204 in 1.4691 ms
+2023-05-27 17:04:12.761 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 204 - - 6.6526ms
+2023-05-27 17:04:12.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:04:12.764 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:12.764 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:12.772 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO]]] Get(Boolean) on controller HR.LeaveManagement.Api.Controllers.LeaveRequestController (HR.LeaveManagement.Api).
+2023-05-27 17:04:12.826 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:04:12.892 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:04:12.913 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-05-27 17:04:12.918 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:04:12.931 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api) in 157.8309ms
+2023-05-27 17:04:12.933 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:12.934 +03:00 [INF] HTTP GET /api/LeaveRequest responded 200 in 170.2441 ms
+2023-05-27 17:04:12.936 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 200 - application/json;+charset=utf-8 173.4689ms
+2023-05-27 17:04:14.638 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:04:14.640 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:14.642 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:14.644 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:04:14.649 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:04:14.651 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:04:14.652 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:04:14.653 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 6.1052ms
+2023-05-27 17:04:14.654 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:14.655 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 15.2539 ms
+2023-05-27 17:04:14.656 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 17.9384ms
+2023-05-27 17:04:15.787 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:04:15.790 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:04:15.791 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:15.795 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:04:15.800 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:04:15.803 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:04:15.803 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:04:15.804 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 5.8454ms
+2023-05-27 17:04:15.805 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:04:15.806 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 16.0256 ms
+2023-05-27 17:04:15.807 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 19.4849ms
+2023-05-27 17:10:33.625 +03:00 [INF] User profile is available. Using 'C:\Users\AhmedPC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-27 17:10:33.763 +03:00 [INF] Now listening on: https://localhost:7210
+2023-05-27 17:10:33.765 +03:00 [INF] Now listening on: http://localhost:5125
+2023-05-27 17:10:33.769 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-27 17:10:33.770 +03:00 [INF] Hosting environment: Development
+2023-05-27 17:10:33.771 +03:00 [INF] Content root path: C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api
+2023-05-27 17:10:34.300 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - -
+2023-05-27 17:10:34.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - - - 200 - text/html;charset=utf-8 197.1935ms
+2023-05-27 17:10:34.513 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2023-05-27 17:10:34.513 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - -
+2023-05-27 17:10:34.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 8.5328ms
+2023-05-27 17:10:34.539 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.8562ms
+2023-05-27 17:10:34.758 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - -
+2023-05-27 17:10:34.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 115.2088ms
+2023-05-27 17:10:36.634 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:10:36.642 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:36.645 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 5.2265 ms
+2023-05-27 17:10:36.649 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 15.0729ms
+2023-05-27 17:10:36.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:10:36.653 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:36.740 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:10:36.753 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:10:38.345 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:10:38.378 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:10:38.386 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:10:38.398 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 1640.1558ms
+2023-05-27 17:10:38.401 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:10:38.403 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 1749.7424 ms
+2023-05-27 17:10:38.411 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 1760.4265ms
+2023-05-27 17:10:41.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:10:41.464 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:41.470 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:10:41.473 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:10:41.520 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:10:41.524 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:10:41.525 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:10:41.526 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 50.7067ms
+2023-05-27 17:10:41.527 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:10:41.528 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 63.9812 ms
+2023-05-27 17:10:41.529 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 67.4960ms
+2023-05-27 17:10:45.221 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:10:45.223 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:45.225 +03:00 [INF] HTTP OPTIONS /api/LeaveType/2 responded 204 in 2.2178 ms
+2023-05-27 17:10:45.228 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - - - 204 - - 7.0770ms
+2023-05-27 17:10:45.230 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:10:45.231 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:45.235 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:10:45.245 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO]] Get(Int32) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:10:45.326 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:10:45.333 +03:00 [INF] Executing OkObjectResult, writing value of type 'HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO'.
+2023-05-27 17:10:45.341 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 92.8511ms
+2023-05-27 17:10:45.342 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:10:45.343 +03:00 [INF] HTTP GET /api/LeaveType/2 responded 200 in 111.8383 ms
+2023-05-27 17:10:45.344 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType/2 - - - 200 - application/json;+charset=utf-8 114.2535ms
+2023-05-27 17:10:47.633 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:10:47.635 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:47.638 +03:00 [INF] HTTP OPTIONS /api/LeaveType/2 responded 204 in 2.7687 ms
+2023-05-27 17:10:47.639 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - - - 204 - - 6.1004ms
+2023-05-27 17:10:47.640 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38
+2023-05-27 17:10:47.641 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:47.642 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:10:47.646 +03:00 [INF] Route matched with {action = "Put", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType.UpdateLeaveTypeCommand) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:10:47.703 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveTypes] AS [l]
+        WHERE [l].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:10:47.727 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveTypes] AS [l]
+        WHERE [l].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:10:47.734 +03:00 [WRN] Validation errors in update request for LeaveType - 2
+2023-05-27 17:10:47.737 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api) in 88.9024ms
+2023-05-27 17:10:47.738 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:10:47.739 +03:00 [ERR] HTTP PUT /api/LeaveType/2 responded 500 in 97.4696 ms
+HR.LeaveManagment.Application.Exceptions.BadRequestException: Invalid Leave type
+   at HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType.UpdateLeaveTypeCommandHandler.Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\Features\LeaveType\Commands\UpdateLeaveType\UpdateLeaveTypeCommandHandler.cs:line 33
+   at HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put(UpdateLeaveTypeCommand leaveType) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api\Controllers\LeaveTypeController.cs:line 55
+   at lambda_method49(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-05-27 17:10:47.807 +03:00 [ERR] {"Errors":{"Id":["The specified condition was not met for 'Id'."],"":["Leave type already exists"]},"Type":"BadRequestException","Title":"Invalid Leave type","Status":400,"Detail":null,"Instance":null,"Extensions":{}}
+2023-05-27 17:10:47.816 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38 - 400 - application/json;+charset=utf-8 175.7470ms
+2023-05-27 17:10:57.554 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:10:57.556 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:57.557 +03:00 [INF] HTTP OPTIONS /api/LeaveType/2 responded 204 in 1.3000 ms
+2023-05-27 17:10:57.559 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - - - 204 - - 5.7624ms
+2023-05-27 17:10:57.561 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38
+2023-05-27 17:10:57.562 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:10:57.563 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:10:57.564 +03:00 [INF] Route matched with {action = "Put", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType.UpdateLeaveTypeCommand) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:10:57.572 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveTypes] AS [l]
+        WHERE [l].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:10:57.576 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveTypes] AS [l]
+        WHERE [l].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:10:57.578 +03:00 [WRN] Validation errors in update request for LeaveType - 2
+2023-05-27 17:10:57.580 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api) in 14.4053ms
+2023-05-27 17:10:57.582 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:10:57.583 +03:00 [ERR] HTTP PUT /api/LeaveType/2 responded 500 in 20.5480 ms
+HR.LeaveManagment.Application.Exceptions.BadRequestException: Invalid Leave type
+   at HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType.UpdateLeaveTypeCommandHandler.Handle(UpdateLeaveTypeCommand request, CancellationToken cancellationToken) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\Features\LeaveType\Commands\UpdateLeaveType\UpdateLeaveTypeCommandHandler.cs:line 33
+   at HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put(UpdateLeaveTypeCommand leaveType) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api\Controllers\LeaveTypeController.cs:line 55
+   at lambda_method49(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-05-27 17:10:57.591 +03:00 [ERR] {"Errors":{"Id":["The specified condition was not met for 'Id'."],"":["Leave type already exists"]},"Type":"BadRequestException","Title":"Invalid Leave type","Status":400,"Detail":null,"Instance":null,"Extensions":{}}
+2023-05-27 17:10:57.593 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38 - 400 - application/json;+charset=utf-8 31.7836ms
+2023-05-27 17:13:14.201 +03:00 [INF] User profile is available. Using 'C:\Users\AhmedPC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-27 17:13:14.327 +03:00 [INF] Now listening on: https://localhost:7210
+2023-05-27 17:13:14.330 +03:00 [INF] Now listening on: http://localhost:5125
+2023-05-27 17:13:14.332 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-27 17:13:14.333 +03:00 [INF] Hosting environment: Development
+2023-05-27 17:13:14.333 +03:00 [INF] Content root path: C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api
+2023-05-27 17:13:15.021 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - -
+2023-05-27 17:13:15.395 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - - - 200 - text/html;charset=utf-8 374.6865ms
+2023-05-27 17:13:15.408 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2023-05-27 17:13:15.432 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 22.8078ms
+2023-05-27 17:13:15.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - -
+2023-05-27 17:13:15.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.9902ms
+2023-05-27 17:13:15.681 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - -
+2023-05-27 17:13:15.825 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 143.8127ms
+2023-05-27 17:13:19.226 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:19.235 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:19.240 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 8.1687 ms
+2023-05-27 17:13:19.246 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 19.3035ms
+2023-05-27 17:13:19.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:19.251 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:19.378 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:19.396 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:20.281 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:20.313 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:20.322 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:20.331 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 931.0553ms
+2023-05-27 17:13:20.334 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:20.336 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 1085.3029 ms
+2023-05-27 17:13:20.342 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 1094.6050ms
+2023-05-27 17:13:22.297 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:13:22.300 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:22.302 +03:00 [INF] HTTP OPTIONS /api/LeaveType/2 responded 204 in 2.5764 ms
+2023-05-27 17:13:22.304 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - - - 204 - - 6.9467ms
+2023-05-27 17:13:22.305 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:13:22.306 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:22.310 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:22.319 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO]] Get(Int32) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:22.426 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:13:22.434 +03:00 [INF] Executing OkObjectResult, writing value of type 'HR.LeaveManagement.Application.Features.LeaveType.Queries.GetLeaveTypeDetails.LeaveTypeDetailDTO'.
+2023-05-27 17:13:22.441 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 121.04ms
+2023-05-27 17:13:22.443 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:22.443 +03:00 [INF] HTTP GET /api/LeaveType/2 responded 200 in 137.0585 ms
+2023-05-27 17:13:22.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType/2 - - - 200 - application/json;+charset=utf-8 139.3504ms
+2023-05-27 17:13:24.527 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - -
+2023-05-27 17:13:24.529 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:24.532 +03:00 [INF] HTTP OPTIONS /api/LeaveType/2 responded 204 in 2.3640 ms
+2023-05-27 17:13:24.535 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/2 - - - 204 - - 7.7611ms
+2023-05-27 17:13:24.536 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38
+2023-05-27 17:13:24.537 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:24.540 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:13:24.543 +03:00 [INF] Route matched with {action = "Put", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Put(HR.LeaveManagement.Application.Features.LeaveType.Commands.UpdateLeaveType.UpdateLeaveTypeCommand) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:24.596 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:13:24.688 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [LeaveTypes] SET [DateCreated] = @p0, [DateModified] = @p1, [DefaultDays] = @p2, [Name] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2023-05-27 17:13:24.701 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-05-27 17:13:24.702 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api) in 157.7929ms
+2023-05-27 17:13:24.703 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Put (HR.LeaveManagement.Api)'
+2023-05-27 17:13:24.704 +03:00 [INF] HTTP PUT /api/LeaveType/2 responded 204 in 166.7986 ms
+2023-05-27 17:13:24.705 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7210/api/LeaveType/2 application/json 38 - 204 - - 168.4248ms
+2023-05-27 17:13:24.714 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:24.715 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:24.716 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.2049 ms
+2023-05-27 17:13:24.718 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 4.3670ms
+2023-05-27 17:13:24.719 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:24.720 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:24.721 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:24.721 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:24.724 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:24.726 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:24.727 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:24.727 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 5.0549ms
+2023-05-27 17:13:24.728 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:24.729 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 9.2286 ms
+2023-05-27 17:13:24.730 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 10.9429ms
+2023-05-27 17:13:31.843 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:13:31.844 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:31.846 +03:00 [INF] HTTP OPTIONS /api/LeaveRequest responded 204 in 1.3956 ms
+2023-05-27 17:13:31.848 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 204 - - 4.8081ms
+2023-05-27 17:13:31.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:13:31.851 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:31.852 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:31.860 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO]]] Get(Boolean) on controller HR.LeaveManagement.Api.Controllers.LeaveRequestController (HR.LeaveManagement.Api).
+2023-05-27 17:13:31.955 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:13:31.988 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:13:32.229 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-05-27 17:13:32.260 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:32.271 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api) in 407.8751ms
+2023-05-27 17:13:32.273 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:32.274 +03:00 [INF] HTTP GET /api/LeaveRequest responded 200 in 423.5970 ms
+2023-05-27 17:13:32.277 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 200 - application/json;+charset=utf-8 427.5691ms
+2023-05-27 17:13:33.060 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:33.062 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:33.062 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 0.7329 ms
+2023-05-27 17:13:33.065 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 5.2786ms
+2023-05-27 17:13:33.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:33.067 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:33.069 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:33.070 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:33.075 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:33.077 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:33.077 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:33.078 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 6.7219ms
+2023-05-27 17:13:33.080 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:33.081 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 13.6391 ms
+2023-05-27 17:13:33.082 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 15.5892ms
+2023-05-27 17:13:36.715 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:36.717 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:36.719 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:36.721 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:36.725 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:36.726 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:36.727 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:36.728 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 4.1983ms
+2023-05-27 17:13:36.729 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:36.729 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 12.2891 ms
+2023-05-27 17:13:36.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 15.7436ms
+2023-05-27 17:13:44.650 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:44.652 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:44.653 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.4614 ms
+2023-05-27 17:13:44.655 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 4.9502ms
+2023-05-27 17:13:44.656 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/LeaveType application/json 30
+2023-05-27 17:13:44.657 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:44.658 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Post (HR.LeaveManagement.Api)'
+2023-05-27 17:13:44.661 +03:00 [INF] Route matched with {action = "Post", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Post(HR.LeaveManagement.Application.Features.LeaveType.Commands.CreateLeaveType.CreateLeaveTypeCommand) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:44.689 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveTypes] AS [l]
+        WHERE [l].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:13:44.734 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [LeaveTypes] ([DateCreated], [DateModified], [DefaultDays], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2023-05-27 17:13:44.745 +03:00 [INF] Executing CreatedAtActionResult, writing value of type '<>f__AnonymousType0`1[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-05-27 17:13:44.765 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Post (HR.LeaveManagement.Api) in 100.0078ms
+2023-05-27 17:13:44.767 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Post (HR.LeaveManagement.Api)'
+2023-05-27 17:13:44.767 +03:00 [INF] HTTP POST /api/LeaveType responded 201 in 110.6265 ms
+2023-05-27 17:13:44.769 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/LeaveType application/json 30 - 201 - application/json;+charset=utf-8 112.6085ms
+2023-05-27 17:13:44.773 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:44.774 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:44.775 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:44.777 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:44.780 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:44.782 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:44.782 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:44.783 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 4.84ms
+2023-05-27 17:13:44.784 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:44.785 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 10.6233 ms
+2023-05-27 17:13:44.786 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 12.4629ms
+2023-05-27 17:13:45.391 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:13:45.394 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:45.395 +03:00 [INF] HTTP OPTIONS /api/LeaveRequest responded 204 in 1.5395 ms
+2023-05-27 17:13:45.398 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 204 - - 6.5228ms
+2023-05-27 17:13:45.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:13:45.401 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:45.403 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:45.404 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO]]] Get(Boolean) on controller HR.LeaveManagement.Api.Controllers.LeaveRequestController (HR.LeaveManagement.Api).
+2023-05-27 17:13:45.409 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:13:45.415 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:13:45.420 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-05-27 17:13:45.422 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:45.423 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api) in 17.2278ms
+2023-05-27 17:13:45.424 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:45.425 +03:00 [INF] HTTP GET /api/LeaveRequest responded 200 in 24.1884 ms
+2023-05-27 17:13:45.428 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 200 - application/json;+charset=utf-8 27.6756ms
+2023-05-27 17:13:46.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:46.720 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:46.722 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:46.724 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:46.727 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:46.729 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:46.730 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:46.731 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 5.9602ms
+2023-05-27 17:13:46.733 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:46.735 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 15.4700 ms
+2023-05-27 17:13:46.738 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 20.5518ms
+2023-05-27 17:13:48.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:48.327 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:48.330 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:48.332 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:48.335 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:48.336 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:48.337 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:48.338 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 4.5234ms
+2023-05-27 17:13:48.339 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:48.340 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 13.3136 ms
+2023-05-27 17:13:48.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 16.1672ms
+2023-05-27 17:13:51.780 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveAllocation - -
+2023-05-27 17:13:51.782 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:51.783 +03:00 [INF] HTTP OPTIONS /api/LeaveAllocation responded 204 in 0.5909 ms
+2023-05-27 17:13:51.785 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveAllocation - - - 204 - - 4.7067ms
+2023-05-27 17:13:51.786 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7210/api/LeaveAllocation application/json 17
+2023-05-27 17:13:51.786 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:51.787 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveAllocationController.Post (HR.LeaveManagement.Api)'
+2023-05-27 17:13:51.790 +03:00 [INF] Route matched with {action = "Post", controller = "LeaveAllocation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Post(HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.CreateLeaveAllocation.CreateLeaveAllocationCommand) on controller HR.LeaveManagement.Api.Controllers.LeaveAllocationController (HR.LeaveManagement.Api).
+2023-05-27 17:13:51.798 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:13:51.802 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:13:51.817 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-05-27 17:13:51.838 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-05-27 17:13:51.849 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 4000), @__leaveTypeId_1='?' (DbType = Int32), @__period_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [LeaveAllocations] AS [l]
+        WHERE [l].[EmployeeId] = @__userId_0 AND [l].[LeaveTypeId] = @__leaveTypeId_1 AND [l].[Period] = @__period_2) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-05-27 17:13:51.868 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [LeaveAllocations] ([DateCreated], [DateModified], [EmployeeId], [LeaveTypeId], [NumberOfDays], [Period])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-05-27 17:13:51.877 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveAllocationController.Post (HR.LeaveManagement.Api) in 85.452ms
+2023-05-27 17:13:51.878 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveAllocationController.Post (HR.LeaveManagement.Api)'
+2023-05-27 17:13:51.880 +03:00 [ERR] HTTP POST /api/LeaveAllocation responded 500 in 93.8967 ms
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateLeaveAllocationCommand -> LeaveAllocation
+HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.CreateLeaveAllocation.CreateLeaveAllocationCommand -> HR.LeaveManagement.Domain.LeaveAllocation
+   at lambda_method485(Closure, Object, LeaveAllocation, ResolutionContext)
+   at HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.CreateLeaveAllocation.CreateLeaveAllocationCommandHandler.Handle(CreateLeaveAllocationCommand request, CancellationToken cancellationToken) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\Features\LeaveAllocation\Commands\CreateLeaveAllocation\CreateLeaveAllocationCommandHandler.cs:line 70
+   at HR.LeaveManagement.Api.Controllers.LeaveAllocationController.Post(CreateLeaveAllocationCommand leaveAllocation) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api\Controllers\LeaveAllocationController.cs:line 45
+   at lambda_method376(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-05-27 17:13:51.950 +03:00 [ERR] {"Errors":{},"Type":"InternalServerError","Title":"Missing type map configuration or unsupported mapping.\r\n\r\nMapping types:\r\nCreateLeaveAllocationCommand -> LeaveAllocation\r\nHR.LeaveManagement.Application.Features.LeaveAllocation.Commands.CreateLeaveAllocation.CreateLeaveAllocationCommand -> HR.LeaveManagement.Domain.LeaveAllocation","Status":500,"Detail":"   at lambda_method485(Closure, Object, LeaveAllocation, ResolutionContext)\r\n   at HR.LeaveManagement.Application.Features.LeaveAllocation.Commands.CreateLeaveAllocation.CreateLeaveAllocationCommandHandler.Handle(CreateLeaveAllocationCommand request, CancellationToken cancellationToken) in C:\\Users\\AhmedPC\\Desktop\\.net core vertical slicing with clear arch\\HRLeaveManagment\\HR.LeaveManagment.Application\\Features\\LeaveAllocation\\Commands\\CreateLeaveAllocation\\CreateLeaveAllocationCommandHandler.cs:line 70\r\n   at HR.LeaveManagement.Api.Controllers.LeaveAllocationController.Post(CreateLeaveAllocationCommand leaveAllocation) in C:\\Users\\AhmedPC\\Desktop\\.net core vertical slicing with clear arch\\HRLeaveManagment\\HR.LeaveManagement.Api\\Controllers\\LeaveAllocationController.cs:line 45\r\n   at lambda_method376(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)\r\n   at HR.LeaveManagement.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\\Users\\AhmedPC\\Desktop\\.net core vertical slicing with clear arch\\HRLeaveManagment\\HR.LeaveManagement.Api\\Middleware\\ExceptionMiddleware.cs:line 27","Instance":null,"Extensions":{}}
+2023-05-27 17:13:51.961 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7210/api/LeaveAllocation application/json 17 - 500 - application/json;+charset=utf-8 175.4477ms
+2023-05-27 17:13:54.157 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:13:54.159 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:54.160 +03:00 [INF] HTTP OPTIONS /api/LeaveRequest responded 204 in 1.7251 ms
+2023-05-27 17:13:54.164 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 204 - - 6.5460ms
+2023-05-27 17:13:54.165 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - -
+2023-05-27 17:13:54.166 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:54.167 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:54.168 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO]]] Get(Boolean) on controller HR.LeaveManagement.Api.Controllers.LeaveRequestController (HR.LeaveManagement.Api).
+2023-05-27 17:13:54.178 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:13:54.181 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Approved], [l].[Cancelled], [l].[DateCreated], [l].[DateModified], [l].[DateRequested], [l].[EndDate], [l].[LeaveTypeId], [l].[NumberOfDays], [l].[RequestComments], [l].[RequestingEmployeeId], [l].[StartDate], [l0].[Id], [l0].[DateCreated], [l0].[DateModified], [l0].[DefaultDays], [l0].[Name]
+FROM [LeaveRequests] AS [l]
+INNER JOIN [LeaveTypes] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+2023-05-27 17:13:54.183 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-05-27 17:13:54.184 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveRequest.Queries.GetLeaveRequestesQuery.LeaveRequestsDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:54.185 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api) in 14.9727ms
+2023-05-27 17:13:54.187 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveRequestController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:54.188 +03:00 [INF] HTTP GET /api/LeaveRequest responded 200 in 22.6393 ms
+2023-05-27 17:13:54.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveRequest?isLoggedInUser=false - - - 200 - application/json;+charset=utf-8 24.5406ms
+2023-05-27 17:13:56.002 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:56.005 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:56.006 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.2496 ms
+2023-05-27 17:13:56.009 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 7.0936ms
+2023-05-27 17:13:56.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:13:56.012 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:56.013 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:56.013 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:56.015 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:13:56.017 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:13:56.017 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:13:56.020 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 5.4418ms
+2023-05-27 17:13:56.022 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:13:56.023 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 10.9177 ms
+2023-05-27 17:13:56.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 12.6349ms
+2023-05-27 17:13:59.536 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/4 - -
+2023-05-27 17:13:59.538 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:59.538 +03:00 [INF] HTTP OPTIONS /api/LeaveType/4 responded 204 in 0.6845 ms
+2023-05-27 17:13:59.539 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType/4 - - - 204 - - 3.6475ms
+2023-05-27 17:13:59.541 +03:00 [INF] Request starting HTTP/2 DELETE https://localhost:7210/api/LeaveType/4 - -
+2023-05-27 17:13:59.541 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:13:59.543 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Delete (HR.LeaveManagement.Api)'
+2023-05-27 17:13:59.547 +03:00 [INF] Route matched with {action = "Delete", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(Int32) on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:13:59.553 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+WHERE [l].[Id] = @__id_0
+2023-05-27 17:13:59.565 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [LeaveTypes]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-05-27 17:13:59.569 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-05-27 17:13:59.571 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Delete (HR.LeaveManagement.Api) in 21.9684ms
+2023-05-27 17:13:59.572 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Delete (HR.LeaveManagement.Api)'
+2023-05-27 17:13:59.573 +03:00 [INF] HTTP DELETE /api/LeaveType/4 responded 204 in 31.2363 ms
+2023-05-27 17:13:59.574 +03:00 [INF] Request finished HTTP/2 DELETE https://localhost:7210/api/LeaveType/4 - - - 204 - - 33.2435ms
+2023-05-27 17:14:02.222 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:14:02.223 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:14:02.224 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 0.5152 ms
+2023-05-27 17:14:02.225 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 2.9699ms
+2023-05-27 17:14:02.226 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:14:02.227 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:14:02.228 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:14:02.229 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:14:02.234 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:14:02.236 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:14:02.236 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:14:02.237 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 5.221ms
+2023-05-27 17:14:02.238 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:14:02.239 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 12.3768 ms
+2023-05-27 17:14:02.240 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 14.1384ms
+2023-05-27 17:18:15.964 +03:00 [INF] User profile is available. Using 'C:\Users\AhmedPC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-27 17:18:16.087 +03:00 [INF] Now listening on: https://localhost:7210
+2023-05-27 17:18:16.088 +03:00 [INF] Now listening on: http://localhost:5125
+2023-05-27 17:18:16.090 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-27 17:18:16.091 +03:00 [INF] Hosting environment: Development
+2023-05-27 17:18:16.092 +03:00 [INF] Content root path: C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api
+2023-05-27 17:18:16.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - -
+2023-05-27 17:18:16.173 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:18:16.215 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:18:16.220 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 6.7512 ms
+2023-05-27 17:18:16.228 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 56.0185ms
+2023-05-27 17:18:16.235 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:18:16.240 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:18:16.376 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:18:16.389 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - - - 200 - text/html;charset=utf-8 218.2962ms
+2023-05-27 17:18:16.397 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:18:16.406 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - -
+2023-05-27 17:18:16.407 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2023-05-27 17:18:16.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 11.5807ms
+2023-05-27 17:18:16.436 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.5742ms
+2023-05-27 17:18:16.516 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - -
+2023-05-27 17:18:16.664 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 147.4100ms
+2023-05-27 17:18:17.671 +03:00 [ERR] Failed executing DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:18:17.696 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HR.LeaveManagement.Persistence.DatabaseContext.HrDatabaseContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreatedBy'.
+Invalid column name 'ModifiedBy'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:cb89dac2-45bb-4950-b7a5-3e2b2b834c55
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreatedBy'.
+Invalid column name 'ModifiedBy'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:cb89dac2-45bb-4950-b7a5-3e2b2b834c55
+Error Number:207,State:1,Class:16
+2023-05-27 17:18:17.709 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 1307.0198ms
+2023-05-27 17:18:17.711 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:18:17.713 +03:00 [ERR] HTTP GET /api/LeaveType responded 500 in 1473.9797 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreatedBy'.
+Invalid column name 'ModifiedBy'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at HR.LeaveManagement.Persistence.Repositories.GenericRepository`1.GetAsync() in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Persistence\Repositories\GenericRepository.cs:line 35
+   at HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.GetLeaveTypesQueryHandler.Handle(GetLeaveTypesQuery request, CancellationToken cancellationToken) in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\Features\LeaveType\Queries\GetAllLeaveTypes\GetLeaveTypesQueryHandler.cs:line 27
+   at HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get() in C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api\Controllers\LeaveTypeController.cs:line 28
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:cb89dac2-45bb-4950-b7a5-3e2b2b834c55
+Error Number:207,State:1,Class:16
+2023-05-27 17:18:17.823 +03:00 [ERR] {"Errors":{},"Type":"InternalServerError","Title":"Invalid column name 'CreatedBy'.\r\nInvalid column name 'ModifiedBy'.","Status":500,"Detail":"   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)\r\n   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n--- End of stack trace from previous location ---\r\n   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)\r\n   at HR.LeaveManagement.Persistence.Repositories.GenericRepository`1.GetAsync() in C:\\Users\\AhmedPC\\Desktop\\.net core vertical slicing with clear arch\\HRLeaveManagment\\HR.LeaveManagment.Persistence\\Repositories\\GenericRepository.cs:line 35\r\n   at HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.GetLeaveTypesQueryHandler.Handle(GetLeaveTypesQuery request, CancellationToken cancellationToken) in C:\\Users\\AhmedPC\\Desktop\\.net core vertical slicing with clear arch\\HRLeaveManagment\\HR.LeaveManagment.Application\\Features\\LeaveType\\Queries\\GetAllLeaveTypes\\GetLeaveTypesQueryHandler.cs:line 27\r\n   at HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get() in C:\\Users\\AhmedPC\\Desktop\\.net core vertical slicing with clear arch\\HRLeaveManagment\\HR.LeaveManagement.Api\\Controllers\\LeaveTypeController.cs:line 28\r\n   at lambda_method6(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)\r\n   at HR.LeaveManagement.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\\Users\\AhmedPC\\Desktop\\.net core vertical slicing with clear arch\\HRLeaveManagment\\HR.LeaveManagement.Api\\Middleware\\ExceptionMiddleware.cs:line 27","Instance":null,"Extensions":{}}
+2023-05-27 17:18:17.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 500 - application/json;+charset=utf-8 1610.8970ms
+2023-05-27 17:19:07.587 +03:00 [INF] User profile is available. Using 'C:\Users\AhmedPC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-27 17:19:07.730 +03:00 [INF] Now listening on: https://localhost:7210
+2023-05-27 17:19:07.731 +03:00 [INF] Now listening on: http://localhost:5125
+2023-05-27 17:19:07.733 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-27 17:19:07.734 +03:00 [INF] Hosting environment: Development
+2023-05-27 17:19:07.734 +03:00 [INF] Content root path: C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagement.Api
+2023-05-27 17:19:08.044 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - -
+2023-05-27 17:19:08.300 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - - - 200 - text/html;charset=utf-8 257.5633ms
+2023-05-27 17:19:08.315 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - -
+2023-05-27 17:19:08.315 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - -
+2023-05-27 17:19:08.321 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - - - 200 12014 application/javascript;+charset=utf-8 6.2723ms
+2023-05-27 17:19:08.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.8841ms
+2023-05-27 17:19:08.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - -
+2023-05-27 17:19:08.621 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.4167ms
+2023-05-27 17:19:09.810 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:19:09.818 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:19:09.823 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 6.4547 ms
+2023-05-27 17:19:09.828 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 17.5930ms
+2023-05-27 17:19:09.830 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:19:09.832 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:19:09.935 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:19:09.954 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:19:10.882 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:19:10.917 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:19:10.926 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:19:10.939 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 980.008ms
+2023-05-27 17:19:10.943 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:19:10.947 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 1115.2634 ms
+2023-05-27 17:19:10.955 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 1124.7798ms
+2023-05-27 17:22:40.283 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:22:40.285 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:22:40.287 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.8961 ms
+2023-05-27 17:22:40.289 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 5.7700ms
+2023-05-27 17:22:40.291 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:22:40.293 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:22:40.302 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:22:40.305 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:22:40.362 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:22:40.368 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:22:40.369 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:22:40.371 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 63.7797ms
+2023-05-27 17:22:40.372 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:22:40.373 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 80.2058 ms
+2023-05-27 17:22:40.375 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 83.8000ms
+2023-05-27 17:50:38.896 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:50:38.898 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:50:38.899 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.9074 ms
+2023-05-27 17:50:38.901 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 4.9517ms
+2023-05-27 17:50:38.903 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:50:38.904 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:50:38.911 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:50:38.914 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:50:39.707 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:50:39.711 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:50:39.712 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:50:39.713 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 795.9565ms
+2023-05-27 17:50:39.714 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:50:39.715 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 810.5886 ms
+2023-05-27 17:50:39.716 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 813.0196ms
+2023-05-27 17:52:28.101 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:52:28.102 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:52:28.104 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 2.2526 ms
+2023-05-27 17:52:28.107 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 6.3821ms
+2023-05-27 17:52:28.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:52:28.110 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:52:28.111 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:52:28.112 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:52:28.116 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:52:28.118 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:52:28.119 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:52:28.120 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 5.3135ms
+2023-05-27 17:52:28.121 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:52:28.122 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 12.1668 ms
+2023-05-27 17:52:28.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 15.2878ms
+2023-05-27 17:52:44.654 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:52:44.655 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:52:44.657 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.3735 ms
+2023-05-27 17:52:44.660 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 6.2563ms
+2023-05-27 17:52:44.663 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:52:44.665 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:52:44.666 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:52:44.667 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:52:44.670 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:52:44.672 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:52:44.673 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:52:44.675 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 6.3475ms
+2023-05-27 17:52:44.676 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:52:44.676 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 11.0544 ms
+2023-05-27 17:52:44.678 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 14.5494ms
+2023-05-27 17:52:57.616 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:52:57.618 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:52:57.620 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.6214 ms
+2023-05-27 17:52:57.622 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 5.4075ms
+2023-05-27 17:52:57.624 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:52:57.625 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:52:57.627 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:52:57.628 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:52:57.636 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:52:57.641 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:52:57.642 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:52:57.643 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 10.2714ms
+2023-05-27 17:52:57.645 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:52:57.646 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 20.7418 ms
+2023-05-27 17:52:57.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 26.1189ms
+2023-05-27 17:53:44.319 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:53:44.329 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:53:44.330 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.0936 ms
+2023-05-27 17:53:44.333 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 13.2623ms
+2023-05-27 17:53:44.342 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:53:44.344 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:53:44.346 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:53:44.347 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:53:44.353 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:53:44.363 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:53:44.364 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:53:44.367 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 16.0725ms
+2023-05-27 17:53:44.369 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:53:44.370 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 26.4643 ms
+2023-05-27 17:53:44.372 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 30.4187ms
+2023-05-27 17:55:42.848 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - -
+2023-05-27 17:55:42.851 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:55:42.853 +03:00 [INF] HTTP OPTIONS /api/LeaveType responded 204 in 1.9579 ms
+2023-05-27 17:55:42.854 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7210/api/LeaveType - - - 204 - - 5.6398ms
+2023-05-27 17:55:42.855 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7210/api/LeaveType - -
+2023-05-27 17:55:42.856 +03:00 [INF] CORS policy execution successful.
+2023-05-27 17:55:42.857 +03:00 [INF] Executing endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:55:42.858 +03:00 [INF] Route matched with {action = "Get", controller = "LeaveType"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO]] Get() on controller HR.LeaveManagement.Api.Controllers.LeaveTypeController (HR.LeaveManagement.Api).
+2023-05-27 17:55:42.864 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CreatedBy], [l].[DateCreated], [l].[DateModified], [l].[DefaultDays], [l].[ModifiedBy], [l].[Name]
+FROM [LeaveTypes] AS [l]
+2023-05-27 17:55:42.866 +03:00 [INF] Leave Types Were retrieved successfully
+2023-05-27 17:55:42.867 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[HR.LeaveManagement.Application.Features.LeaveType.Queries.GetAllLeaveTypes.LeaveTypeDTO, HR.LeaveManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-27 17:55:42.869 +03:00 [INF] Executed action HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api) in 9.7446ms
+2023-05-27 17:55:42.871 +03:00 [INF] Executed endpoint 'HR.LeaveManagement.Api.Controllers.LeaveTypeController.Get (HR.LeaveManagement.Api)'
+2023-05-27 17:55:42.872 +03:00 [INF] HTTP GET /api/LeaveType responded 200 in 15.9222 ms
+2023-05-27 17:55:42.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7210/api/LeaveType - - - 200 - application/json;+charset=utf-8 18.8310ms

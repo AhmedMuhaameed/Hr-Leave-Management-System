@@ -1,0 +1,15 @@
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.csproj.AssemblyReference.cache
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.AssemblyInfoInputs.cache
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.AssemblyInfo.cs
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.csproj.CoreCompileInputs.cache
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\bin\Debug\net7.0\HR.LeaveManagement.Application.deps.json
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\bin\Debug\net7.0\HR.LeaveManagement.Application.dll
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\bin\Debug\net7.0\HR.LeaveManagement.Application.pdb
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\bin\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\bin\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.csproj.CopyComplete
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.dll
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\refint\HR.LeaveManagement.Application.dll
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\HR.LeaveManagement.Application.pdb
+C:\Users\AhmedPC\Desktop\.net core vertical slicing with clear arch\HRLeaveManagment\HR.LeaveManagment.Application\obj\Debug\net7.0\ref\HR.LeaveManagement.Application.dll
